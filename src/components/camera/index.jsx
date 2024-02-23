@@ -5,11 +5,11 @@ import { useDispatch } from "react-redux";
 export const CustomWebcam = () => {
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setImgSrc(imageSrc);
-    dispatch({type:"Add_customer",payload:imageSrc})
+    dispatch({ type: "Add_customer", payload: imageSrc });
   }, [webcamRef]);
 
   const retake = () => {
@@ -20,8 +20,8 @@ export const CustomWebcam = () => {
     <div className="container">
       <Webcam height={500} width={500} ref={webcamRef} />
       <div className="buttons">
-        <button onClick={capture}>Capture photo</button>
-        <button onClick={retake}>Retake photo</button>
+        <button onClick={capture}>Suratga olish</button>
+        <button onClick={retake}>Suratni o'chirish</button>
       </div>
       {imgSrc && <img src={imgSrc} alt="webcam" />}
     </div>
