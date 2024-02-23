@@ -29,3 +29,21 @@ body {
     background-position: 0% 50%;
   }
 }
+.nav {
+  max-width: 1180px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.nav ul {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
